@@ -1,0 +1,169 @@
+CRUD Javascript Basics
+
+---------------------
+x = { "a" : 1 };
+y = "a";
+x[y]++;
+print(x.a);
+
+Outputs 2
+
+---------------------
+Inserting Docs:
+
+db.fruit.insert({"name":"apple","color":"red","shape":"round"})
+
+---------------------
+Introduction to findOne()
+
+db.users.findOne({"username":"dwight"},{"_id":false,"email":true})
+
+---------------------
+Introduction to find()
+
+db.people.find()
+
+Generate a bunch of entries:
+
+for (i=0; i<1000; i++) {
+    names=["exam","essay","quiz"];
+
+    for (j=0;j<3;j++) {
+        db.scores.insert(
+            {
+                "student" : i , "type" : names[j] , score : Math.round(Math.random()*100)
+            }
+        );
+    }
+}
+
+-------------------------
+Query Using Field Selection
+
+db.scores.find({ type : "essay" , score : 50 },{ student : true , _id : false })
+
+-------------------------
+Query using $gt and $lt
+
+db.scores.find({ score : { $gte : 50 , $lte : 60 }});
+
+------------------------
+Inequalities on Strings
+
+Will find all users with username between "F" and "Q":
+
+db.users.find({ name : { $gte : "F" , $lte : "Q" }});
+AND
+db.users.find({ name : { $lte : "Q" , $gte : "F" }});
+
+-----------------------
+Using regexes, $exists, $type
+
+db.users.find({ name : { $regex : "q" } , email : { $exists : true }});
+
+------------------------
+Using $or
+
+db.scores.find({ $for : { score : { $lt : 50 }} , { score : { $ft : 90 }}});
+
+---------------------
+Using $and
+
+Works like $or
+
+---------------------
+Querying inside Arrays
+
+Polymorphic
+
+-------------------
+Using $in and $all
+
+Returns every document that has both array items in the specified field
+db.accounts.find({ favorites : { $all : [ "pretzels" , "beer" ] }});
+
+Returns documents where a value in the array is in the specified field.
+db.accounts.find({ name : { $in [ "Howard" , "John" ]}});
+
+-------------------
+Queries with dot notation
+
+db.catalog.find({ price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 }})
+
+----------------------
+Querying, Cursors
+
+cur = db.people.find(); null;
+cur.hasNext()
+cur.next()
+while (cur.hasNext()) printjson(cur.next());
+cur.limit(5); null;
+cur.sort( {name : -1 }); null;
+cur.sort().limit().skip()
+
+db.scores.find({type:"exam"}).sort({score:-1}).skip(50).limit(20)
+
+------------------------
+Counting Results
+
+db.scores.count()
+
+db.scores.count({type:"essay",score:{$gt:90}});
+
+-------------------------
+Wholesale Updating of a Document
+
+db.people.update()
+db.people.update( {name:"Smith"}, {name:"Thompson", salary : 50000});
+
+--------------------------
+Using the $set Command
+
+db.people.update({name:"Alice"},{$set:{age:30}});
+db.people.update({name:"Alice"},{$inc:{age:1}});
+db.users.update({"_id":"myrnarackham"},{$set:{"country":"RU"}});
+
+-------------------
+Using the $unset Command
+
+db.people.update({name:"Jones"},{$unset:{profession:1}})
+
+---------------------
+Using $push, $pop, $pull, $pushall, $pullall, $addToSet
+
+db.arrays.update({_id:0},{$set:{"a.2":5}})
+$push = adds value to end of array
+$pop = returns last array value, deleting it from the array
+$pop with -1 = returns first array value, deleting it from the array
+$pushAll = adds array of values to end of array
+$pull = returns the specified value from the array deleting it from the array
+$pullAll = returns any occurrence of specified array values, deleting them from the array
+$addToSet = acts like push, does nothing if value is already present in array
+
+------------------------
+Upserts
+
+{upsert:true}
+
+-------------------
+Multi-update
+
+{} = acts as a selector specifying every document in the collection.
+{multi:true} = required to add new field to every document
+
+db.scores.update({"score":{$lt:70}},{$inc:{score:20}},{multi:true})
+
+-----------------------
+Removing Data
+
+db.people.remove() = drops each item one by one from the collection - meta data remains
+db.people.drop() = drops entire collection - meta data deleted also
+
+-------------------------
+getLastError
+
+db.runCommand({getLastError : 1})
+
+------------------------------
+PyMongo
+
