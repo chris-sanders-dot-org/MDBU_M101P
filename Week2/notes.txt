@@ -167,3 +167,5 @@ db.runCommand({getLastError : 1})
 ------------------------------
 PyMongo
 
+See the .py files in the Week 2 directory.
+
