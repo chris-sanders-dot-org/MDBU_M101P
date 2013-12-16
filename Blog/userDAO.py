@@ -55,7 +55,9 @@ class UserDAO:
         try:
             # XXX HW 2.3 Students Work Here
             # you will need to retrieve right document from the users collection.
-            print "This space intentionally left blank."
+            #print "This space intentionally left blank."
+            query = {'_id': username}
+            user = self.users.find_one(query)
         except:
             print "Unable to query database for user"
 
@@ -87,6 +89,7 @@ class UserDAO:
             # Don't over think this one, it's a straight forward insert.
 
             print "This space intentionally left blank."
+            self.users.insert(user)
 
         except pymongo.errors.OperationFailure:
             print "oops, mongo error"

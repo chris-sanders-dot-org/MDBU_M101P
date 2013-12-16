@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d34ca5-5899-45c8-a8fc-1bbee5135093" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Week2/hw/hw2-1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2/notes.txt" afterPath="$PROJECT_DIR$/Week2/notes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blog/userDAO.py" afterPath="$PROJECT_DIR$/Blog/userDAO.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDBU_M101P.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +35,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw2-1.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="userDAO.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Blog/userDAO.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="14" selection-start="680" selection-end="680" vertical-scroll-proportion="-0.14007781" vertical-offset="396" max-vertical-offset="1890">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="using_find.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week2/using_find.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog/blog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="3762">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="using_insert.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week2/using_insert.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw2-1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Week2/hw/hw2-1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.73540854" vertical-offset="0" max-vertical-offset="576">
+            <state line="22" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="594">
               <folding />
             </state>
           </provider>
@@ -48,9 +84,7 @@
         <entry file="file://$PROJECT_DIR$/Week2/hw/hw2-2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="41" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="864">
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,6 +113,7 @@
         <option value="$PROJECT_DIR$/Week2/notes.txt" />
         <option value="$PROJECT_DIR$/Week2/hw/hw2-1.py" />
         <option value="$PROJECT_DIR$/Week2/hw/hw2-2.py" />
+        <option value="$PROJECT_DIR$/Blog/userDAO.py" />
       </list>
     </option>
   </component>
@@ -113,7 +148,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,14 +214,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -279,6 +314,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,9 +338,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -375,14 +410,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1225" height="666" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21246924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21246924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -409,55 +444,24 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Week2/using_regex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="410" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Week2/using_find.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="8" selection-start="555" selection-end="555" vertical-scroll-proportion="0.6950904" vertical-offset="271" max-vertical-offset="1008">
-          <folding>
-            <element signature="e#1#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Week2/find_using_gt_lt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.41860464" vertical-offset="54" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_upsert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="28" selection-end="174" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="738">
-          <folding>
-            <element signature="e#1#15#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="7" column="18" selection-start="28" selection-end="174" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_find_with_selector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1008">
-          <folding />
-        </state>
+        <state line="29" column="25" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1008" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_update.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="14" selection-start="2646" selection-end="2646" vertical-scroll-proportion="3.6770427" vertical-offset="0" max-vertical-offset="2052">
-          <folding />
-        </state>
+        <state line="107" column="14" selection-start="2646" selection-end="2646" vertical-scroll-proportion="3.6770427" vertical-offset="0" max-vertical-offset="2052" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_limit_skip_sort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="61" selection-start="415" selection-end="432" vertical-scroll-proportion="0.770428" vertical-offset="0" max-vertical-offset="1062">
-          <folding />
-        </state>
+        <state line="23" column="61" selection-start="415" selection-end="432" vertical-scroll-proportion="0.770428" vertical-offset="0" max-vertical-offset="1062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/notes.txt">
@@ -469,64 +473,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_find_and_modify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/using_dot_notation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="2" selection-start="484" selection-end="484" vertical-scroll-proportion="0.8816326" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="25" column="2" selection-start="484" selection-end="484" vertical-scroll-proportion="0.8816326" vertical-offset="0" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog/validate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/insert_quiz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.19066148" vertical-offset="98" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/blog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="910" max-vertical-offset="3204">
-          <folding>
-            <element signature="e#1395#1625#0" expanded="false" />
-            <element signature="e#1718#1987#0" expanded="false" />
-            <element signature="e#2075#2213#0" expanded="false" />
-            <element signature="e#3398#3450#0" expanded="false" />
-            <element signature="e#3503#3662#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/userDAO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="50" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1836">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.19066148" vertical-offset="98" max-vertical-offset="666" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/hw/hw2-2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="864">
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/._userDAO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/blog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="2690" max-vertical-offset="3204">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week2/hw/hw2-1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.73540854" vertical-offset="0" max-vertical-offset="576">
+        <state line="22" column="19" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week2/using_insert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week2/using_find.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/userDAO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="14" selection-start="680" selection-end="680" vertical-scroll-proportion="-0.14007781" vertical-offset="396" max-vertical-offset="1890">
           <folding />
         </state>
       </provider>
