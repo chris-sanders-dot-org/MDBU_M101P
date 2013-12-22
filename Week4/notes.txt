@@ -1,0 +1,144 @@
+Create Index
+db.students.ensureIndex({'student_id':1})
+    1 = ascending
+    -1 = descending
+
+Discover Index
+db.system.index.find()
+db.students.getIndexes()
+db.students.dropIndex({exactly as named here})
+
+Multikey Indexes
+Creates an index key for every item in an array when index is created on an array.
+Cannot create an index that makes keys for more than one array.
+    {tags:['cycling','hiking', 'football']}
+    {categories:['sports', 'hobbies']}
+        Can index tags or categories, but not both.
+        "cannot index parallel arrays" is the error msg
+        Can use dot notation to index below first level
+
+Index Creation, Option Unique
+db.students.ensureIndex({'student_id':1},{unique:true})
+
+Index Creation, Removing Dupes
+db.students.ensureIndex({'student_id':1},{unique:true, dropDups:true}) - DANGER
+    No way to control which document is deleted as part of removing duplicate.
+
+Index Creation, Sparse
+    If key is missing from multiple documents, the key will map to null for those documents
+        {a:1, b:1, c:1}
+        {a:2, b:2}
+        {a:3, b:3}
+    db.students.ensureIndex({'student_id':1},{unique:true, sparse:true})
+        Documents that do not have the index key in a "sparse" index are simply left out.
+
+Index Creation, Background
+    Created in foreground
+        Default
+        Blocks writers in the same database (not entire server post mongodb 2.2)
+    Created in background {background:true}
+        Does not blocks writers
+        Slow
+        Can only build one at a time per database.
+        Blocks the mongo shell that you are using to create the index.
+
+Using Explain
+db.foo.find({c:1}).explain()
+    cursor = BasicCursor - no index was used.
+    n = number of documents returned.
+    millis = number of milliseconds to execute the query.
+    cursor : BtreeCursor - used the index shown
+    isMultiKey = were any keys an array?
+    indexOnly = true or false
+        query satisfied by only the index (didn't need to retrieve any document)
+
+When is an Index Used
+
+How Large is your Index
+    Want it to be in memory, not on disk.
+    db.students.stats()
+    db.students.totalIndexSize()
+
+Index Cardinality
+    How many index points for each index type
+    Regular
+        1:1
+    Sparse
+        <= number of documents
+    Multikey
+        can be significantly greater than the number of documents
+
+Index Selectivity
+
+Hinting an Index
+    Can tell the database which index to use
+    .hint({a:1})
+    .hint({$natural:1}) - use no index
+
+Hinting in Pymongo
+    foo.find(query).hint([('c', pymongo.ASCENDING)])
+
+Efficiency of Index Use
+    Just because it uses an index doesn't mean it is efficient.
+        negative operators
+        regex
+            /abcd/ - can't use index
+            /^abcd/ - can use index
+
+Geospatial Indexes
+    Find things based on location
+    2 dimensional model
+    x/y coordinates
+    document must have location stored in it. [x,y]
+    use ensureIndex and tell it they are locations.
+        ensureIndex({'location':'2d', type:1})
+            find({location:{$near:[x,y]}})
+                returns documents in order of increasing distance
+                .limit(20) - may need to limit results due to high number.
+
+Geospatial Spherical
+    longitude - poles
+    lattitude - equator/horizontal
+        closer together as they approach the poles
+    max distance is specified in radians
+    distance / radius of earth
+    still call it a 2d index when creating.
+        it's queried a different way
+    db.runCommand({geoNear:'stores', near: [50,50], spherical:true, maxDistance:1})
+
+Logging Slow Queries
+    Mongodb automatically logs slow queries that take more than 100ms by default
+
+Profiling
+    Writes to system.profile
+    3 levels to profiler
+        0 - off
+        1 - log slow queries
+        2 - log all queries
+    when writing a program, convenient to see all queries
+    db.system.profile.find().pretty()
+    profile collection is fixed size and will overwrite oldest - FIFO
+    db.setProfilingStatus(1,4) - log slow queries above 4 ms
+    db.getProfilingStatus() - look at current profiling status
+    db.setProfilingLevel(0) - turns it off
+    db.getProfilingLevel() - see current level
+    query example
+        db.system.profile.find({millis:{$gt:1000}}).sort({'ts':-1})
+
+Mongostat
+    named after iostat
+    idx miss % - miss rate to index in memory
+        whether or not the index is in memory, or has to go to disk
+        useless if the queries aren't using an index!
+    res - resident memory usage of mongod
+
+Mongotop
+    named after top - high level view of mongo resources
+
+
+Sharding Overview
+    Split large collections among multiple mongodb servers
+    mongos - router service  application talks to mongos
+    mongoid references a replica set (shard), a collection of multiple mongo servers.
+    shard key - identifies the shard to use
+    if it doesn't know the shard key, it broadcasts the operation (read/write)
